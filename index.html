@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Combo Executor </title>
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            background-color: rgb(11, 11, 11);
+        }
+
+        .container {
+            padding-top: 4vh;
+        }
+
+        .Navbar {
+            animation: slideDown 5s ease-out;
+        }
+
+        @keyframes slideDown {
+            from {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .menu{
+            display: flex;
+            list-style: none;
+            justify-content: center;
+        }
+
+        .menu li{
+            margin: 0 1rem;
+        }
+
+        .menu li a{
+            padding: 2vh;
+            color: white;
+            text-decoration: none;
+            background: linear-gradient(to right, #1e3c72, #2a5298);
+            font-size: 3vh;
+            font-family: Arial, Helvetica, sans-serif;
+            border-radius: 1.5vh;
+        }
+
+        .menu li a:hover {
+            background: linear-gradient(to right, #444444, #444444);
+        }
+
+        .Logo {
+            display: flex;
+            justify-content: center;
+            margin-top: 10vh;
+            animation: slideDown 3s ease-out;
+        }
+
+        .Logo img{
+            max-width: 30vh;
+            border-radius: 4vh;
+        }
+
+        .btndownload{
+            margin-top: 10vh;
+            display: flex;
+            list-style: none;
+            justify-content: center;
+            animation: slideDown 5s ease-out;
+        }
+
+        .btndownload a{
+            text-decoration: none;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(to right, #1e3c72, #2a5298);
+            padding: 2vh;
+            border-radius: 1.5vh;
+            font-size: 3vh;
+        }
+
+        .btndownload a:hover{
+            background: linear-gradient(to right, #444444, #444444);    
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Navbar -->
+            <div class="Navbar">
+                <ul class="menu">
+                    <li><a href="https://discord.gg/fjGedBsEjt"> เข้าร่วมดิสคอส</a></li>
+                    <li><a href="https://www.youtube.com/@combohub-c9u"> Youtube</a></li>
+                </ul>
+            </div>
+        <!-- Navbar -->
+        <div class="Logo">
+            <img src="images/logo.png" alt="">
+        </div>
+        <div class="btndownload">
+            <a href="https://gofile.io/d/XLwJ6Q"> ดาวน์โหลดและติดตั้ง Combo Executor</a>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('contextmenu', e => e.preventDefault()); // ปิดคลิกขวา
+        document.onkeydown = function(e) {
+        if (e.key === "F12" || 
+            (e.ctrlKey && e.shiftKey && (e.key === "I" || e.key === "J" || e.key === "C")) || 
+            (e.ctrlKey && e.key === "U")) {
+            return false;
+        }
+        };
+    </script>
+</body>
+</html>
